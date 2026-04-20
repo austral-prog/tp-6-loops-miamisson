@@ -9,7 +9,12 @@ def find_min(numbers):
     Ejemplo: find_min([5, 5, 5]) -> 5
     Ejemplo: find_min([-3, -1, -7]) -> -7
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    num_min = numbers[0]
+    for i in range(len(numbers)):
+        if num_min >= numbers[i]:
+            num_min = numbers[i]
+    return num_min
+# print(find_min([-3, -1, -7]))
 
 
 def find_max(numbers):
@@ -21,7 +26,12 @@ def find_max(numbers):
     Ejemplo: find_max([5, 5, 5]) -> 5
     Ejemplo: find_max([-3, -1, -7]) -> -1
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    num_max = numbers[0]
+    for i in range(len(numbers)):
+        if numbers[i] >= num_max:
+            num_max = numbers[i]
+    return num_max
+# print(find_max([3, 1, 7, 2]))
 
 
 def count_negatives(numbers):
@@ -33,4 +43,13 @@ def count_negatives(numbers):
     Ejemplo: count_negatives([1, 2, 3]) -> 0
     Ejemplo: count_negatives([-1, -2, -3]) -> 3
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    if numbers == "":
+        return []
+    else: 
+        contador_negativos = 0
+        for i in range(len(numbers)):
+            if numbers[i] < 0:
+                contador_negativos = contador_negativos + 1
+        return contador_negativos
+    
+# print(count_negatives([]))
